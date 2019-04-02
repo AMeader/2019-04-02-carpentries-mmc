@@ -15,18 +15,17 @@ Status](https://coveralls.io/repos/github/%3Cusername%3E/%3CPROJECT%20NAME%3E/ba
 
 ## Research Compendium DOI
 
-## Author
+## Autho
 
-<your name> (<user email>)
+Anna G Meader (<anna.meader@gmail.com>)
 
 ## Contents
 
 This is the github repository for our paper titled <PAPER TITLE>. Please
 make use of our work, and if you do, please cite as follows:
 
-> <LAST NAME>, <FIRST NAME>. “<PAPER TITLE>”. *<JOURNAL TITLE>*
-> <VOLUME>, no. <NUMBER> (<YEAR>): <PAGES>. doi:
-> <https://dx.doi.org/xxxxxx>.
+> Meader, Anna. “<PAPER TITLE>”. *<JOURNAL TITLE>* <VOLUME>, no.
+> <NUMBER> (<YEAR>): <PAGES>. doi: <https://dx.doi.org/xxxxxx>.
 
 ## Requirements
 
