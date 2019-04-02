@@ -1,0 +1,33 @@
+---
+title: "Analysis of Life Expectancy"
+author: "Anna Meader"
+date: "4/2/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+```
+## Analysis of Life Expectancy by Continent
+
+ We hypothesize that life expectancy is a function of time and location. This analysis attempts to check that relationship. 
+ 
+ **Note: this is a preliminary analysis and not meant for distribution to the public.**
+ 
+ [Link to the github repository](https://github.com/AMeader/2019-04-02-carpentries-mmc)
+ 
+```{r, echo=FALSE, message=FALSE}
+
+ d <- readr::read_csv(here("data/gapminder/raw/gapminder_data.csv"))
+library(tidyverse)
+d%>%
+  filter(continent=="Asia")%>%
+  ggplot(aes(x=year, y=pop, group=country, color=country))+
+  geom_line()
+ggplot(data=d) + geom_line(aes(x=year, y=pop, group=country, color=country))
+```
+
+## details
+The data consists of years from `r range(d$year)`.
+
