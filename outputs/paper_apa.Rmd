@@ -1,0 +1,45 @@
+---
+title: "The Effects of Life Expectancy on Population over TIme"
+author: "Anna Meader"
+date: "4/2/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(here)
+library(tidyverse)
+library(pander)
+library(stargazer)
+library(beepr)
+d<-readr::read_csv(here("data/gapminder/raw/gapminder_data.csv"))
+```
+
+
+## Introduction
+
+## Data
+```{r}
+n_countries <- length(unique(d$country))
+
+pop_mean<- round(mean(d$pop),0)
+```
+
+
+The data consist of `r length(unique(d$country))` unique countries tracked over `r range(d$year[1])` to `r range(d$year[2])`
+Table 1 presents a summary of the data
+```{r}
+d2 <- d%>%
+  group_by(country) %>%
+pander(summary(d2))
+```
+
+## Results
+```{r}
+m <- lm(lifeExp~continent+year+pop, data=d)
+```
+
+```{r}
+stargazer(m)
+```
+
